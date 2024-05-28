@@ -11,7 +11,7 @@ bonotes.forEach(boton => {
             return;
         }
         if(boton.id === "borrar"){
-            if(pantalla.textContent.length === 1){
+            if(pantalla.textContent.length === 1 || pantalla.textContent === "Error!"){
                 pantalla.textContent = "0";
             }else{
                 pantalla.textContent = pantalla.textContent.slice(0,-1)
@@ -28,7 +28,7 @@ bonotes.forEach(boton => {
             return;
         }
 
-        if(pantalla.textContent === "0"){
+        if(pantalla.textContent === "0" || pantalla.textContent === "Error!"){
             pantalla.textContent = botonapretado
         }else{
             pantalla.textContent += botonapretado;
